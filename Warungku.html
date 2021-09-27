@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Warungku</title>
+    <link rel="stylesheet" href="header,.css" />
+    <script>
+      var slidePosition = 1;
+      SlideShow(slidePosition);
+
+      function plusSlides(n) {
+        SlideShow((slidePosition += n));
+      }
+
+      function currentSlide(n) {
+        SlideShow((slidePosition = n));
+      }
+      z;
+      function SlideShow(n) {
+        var i;
+        var slides = document.getElementsByClassName("Containers");
+        if (n > slides.length) {
+          slidePosition = 1;
+        }
+        if (n < 1) {
+          slidePosition = slides.length;
+        }
+        for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+        }
+        slides[slidePosition - 1].style.display = "block";
+      }
+    </script>
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>Warungku</h1>
+        <nav>
+          <ul>
+            <li><a href="" class="current">Beranda</a></li>
+            <li><a href="">Daftar Masakan</a></li>
+            <li><a href="">tentang</a></li>
+            <li><a href="">kontak</a></li>
+          </ul>
+        </nav>
+      </header>
+      <section class="courses">
+        <div class="slideshow-containers">
+          <div class="Containers ContainersImage">
+            <img src="Images/Nasi Liwet 2.jpg" style="width: 100%" />
+          </div>
+          <div class="Containers">
+            <img src="Images/Nasi Pecel.jpg" style="width: 100%" />
+          </div>
+          <div class="Containers">
+            <img src="Images/Nasi Campur.jpg" style="width: 100%" />
+          </div>
+          <a class="Back" onclick="plusSlides(-1)">❮</a>
+          <a class="forward" onclick="plusSlides(1)">❯</a>
+        </div>
+        <article>
+          <figure>
+            <img src="Images/Nasi Liwet.jpg" alt="nasi liwet" />
+            <figcaption>Nasi Liwet Warungku</figcaption>
+          </figure>
+          <hgroup>
+            <h2>Nasi Liwet</h2>
+            <h3>Nasi Liwet Khas Warungku</h3>
+          </hgroup>
+          <p>Nasi Liwet adalah makanan khas Indonesia yang berupa nasi gurih yang dimasak dengan santan, kaldu ayam, daun salam dan serai. Sehingga memberikan rasa yang kaya dan aromatik.</p>
+        </article>
+        <article>
+          <figure>
+            <img src="Images/Nasi Pecel.jpg" alt="pecel" />
+            <figcaption>Pecel Indonesia</figcaption>
+          </figure>
+          <hgroup>
+            <h2>Nasi Pecel</h2>
+            <h3>Nasi Pecel Khas Warungku</h3>
+          </hgroup>
+          <p>Nasi Pecel adalah makanan yang menggunakan bumbu sambal kacang sebagai bahan utamanya yang dicampur dengan aneka jenis sayuran yang segar dan nikmat.</p>
+        </article>
+        <article>
+          <figure>
+            <img src="Images/Nasi Liwet.jpg" alt="nasi Campur" />
+            <figcaption>Nasi Campur Warungku</figcaption>
+          </figure>
+          <hgroup>
+            <h2>Nasi Campur</h2>
+            <h3>Nasi Campur Khas Warungku</h3>
+          </hgroup>
+          <p>Nasi Campur adalah makanan khas Indonesia yang berupa nasi dengan aneka lauk pauk yang nikmat seperti Ayam Goreng, Kering Tempe, dan Sayur Buncis Oseng yang nikmat.</p>
+        </article> 
+      </section>
+      <aside>
+        <section class="pupolar-recipes">
+          <h2>Masakan Favorit</h2>
+          <a href="">Nasi Campur</a>
+          <a href="">Nasi Liwet</a>
+          <a href="">Nasi Pecel</a>
+        </section>
+        <section class="contact-details">
+          <h2>Kontak</h2>
+          <p>
+            Warungku aneka khas makanan seluruh Indonesia<br />
+            
+          </p>
+        </section>
+       
+      </aside>
+      <footer>&copy; 2021 Warungku</footer>
+    </div>
+  </body>
+</html>
